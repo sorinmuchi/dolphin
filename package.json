@@ -1,0 +1,29 @@
+{
+  "name": "dolphin",
+  "version": "1.0.0",
+  "description": "Express + React Project Template",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorinmuchi/dolphin.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "react",
+    "redux",
+    "react-router",
+    "webpack",
+    "jest"
+  ],
+  "author": "Sorin Muchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sorinmuchi/dolphin/issues"
+  },
+  "homepage": "https://github.com/sorinmuchi/dolphin#readme"
+}
