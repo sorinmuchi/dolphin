@@ -25,5 +25,13 @@
   "bugs": {
     "url": "https://github.com/sorinmuchi/dolphin/issues"
   },
-  "homepage": "https://github.com/sorinmuchi/dolphin#readme"
+  "homepage": "https://github.com/sorinmuchi/dolphin#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "browserslist": "> 0.25%, not dead"
 }
