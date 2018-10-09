@@ -48,8 +48,11 @@
   },
   "browserslist": "> 0.25%, not dead",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
     "dotenv": "^6.1.0",
     "express": "^4.16.3",
+    "morgan": "^1.9.1",
     "node": "^10.11.0",
     "pug": "^2.0.3"
   }
