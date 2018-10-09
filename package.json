@@ -40,20 +40,27 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "nodemon": "^1.18.4",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "webpack-cli": "^3.1.2"
   },
   "browserslist": "> 0.25%, not dead",
   "dependencies": {
+    "babel-loader": "^8.0.4",
+    "babel-register": "^6.26.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
+    "css-loader": "^1.0.0",
     "dotenv": "^6.1.0",
     "express": "^4.16.3",
     "morgan": "^1.9.1",
     "node": "^10.11.0",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2"
   }
 }
