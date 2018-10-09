@@ -4,8 +4,9 @@
   "description": "Express + React Project Template",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "babel-node ./server/index.js",
     "lint": "eslint . --ext .js,.jsx",
+    "dev": "nodemon --exec babel-node ./server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "pre-commit": [
@@ -42,7 +43,14 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "nodemon": "^1.18.4",
     "pre-commit": "^1.2.2"
   },
-  "browserslist": "> 0.25%, not dead"
+  "browserslist": "> 0.25%, not dead",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.3",
+    "node": "^10.11.0",
+    "pug": "^2.0.3"
+  }
 }
