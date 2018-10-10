@@ -1,34 +1,25 @@
 /**
- * Webpack configuration for development
+ * Webpack configuration for production
  */
-
 import path from 'path';
 import webpack from 'webpack';
 
 export default {
-  devtool: 'eval-source-map',
-  entry: [
-    'webpack-hot-middleware/client?reload=true',
-    path.join(process.cwd(), 'src/index'),
-  ],
+  devtool: 'source-map',
+  entry: path.join(process.cwd(), 'src/index'),
   output: {
     filename: 'bundle.js',
     path: path.join(process.cwd(), 'public', 'js'),
     publicPath: '/js',
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
+    new webpack.optimize.UglifyJsPlugin(),
   ],
   module: {
     rules: [
       {
-        enforce: 'pre',
         test: /\.js$/,
-        use: 'eslint-loader',
-      },
-      {
-        test: /\.js?$/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -36,6 +27,10 @@ export default {
           },
         },
         exclude: /node_modules/,
+      },
+      {
+        test: /\.json$/,
+        use: 'json-loader',
       },
       {
         test: /\.(s)?css$/,

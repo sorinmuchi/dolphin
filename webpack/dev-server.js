@@ -2,8 +2,11 @@
  * Webpack dev server
  */
 
+/* eslint-disable import/no-extraneous-dependencies */
+
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
+import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from './config.babel';
 
 export default (app) => {
@@ -15,4 +18,7 @@ export default (app) => {
     logLevel: 'warn',
     publicPath: webpackConfig.output.publicPath,
   }));
+
+  // allow using Webpack hot reloading
+  app.use(webpackHotMiddleware(webpackCompiler));
 };

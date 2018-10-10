@@ -5,6 +5,10 @@
 import { add, subtract } from './module';
 import styles from './styles.css';
 
+if (module.hot) {
+  module.hot.accept();
+}
+
 const resultA = add(2, 3);
 const resultB = subtract(5, 1);
 
