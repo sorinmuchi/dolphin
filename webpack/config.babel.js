@@ -24,7 +24,12 @@ export default {
       },
       {
         test: /\.js?$/,
-        use: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: ['transform-inline-environment-variables'],
+          },
+        },
         exclude: /node_modules/,
       },
       {
