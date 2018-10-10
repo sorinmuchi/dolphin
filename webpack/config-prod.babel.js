@@ -5,6 +5,7 @@ import path from 'path';
 import webpack from 'webpack';
 
 export default {
+  mode: 'production',
   devtool: 'source-map',
   entry: path.join(process.cwd(), 'src/index'),
   output: {
@@ -14,7 +15,6 @@ export default {
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.UglifyJsPlugin(),
   ],
   module: {
     rules: [

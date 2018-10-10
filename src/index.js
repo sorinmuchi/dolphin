@@ -2,17 +2,18 @@
  * index.js
  */
 
-import { add, subtract } from './module';
-import styles from './styles.css';
+/* global document */
+
+import React from 'react';
+import { render } from 'react-dom';
 
 if (module.hot) {
   module.hot.accept();
 }
 
-const resultA = add(2, 3);
-const resultB = subtract(5, 1);
+const MainApp = () => (
+  <h1>Hello React!</h1>
+);
 
-console.log(resultA, resultB);
-console.log(styles.localClass); // _19OBmKu4X8SmIISJiYXz8U
-console.log(styles.globalClass); // undefined
-console.log(process.env.APP_NAME);
+// render the app
+render(<MainApp />, document.getElementById('app'));
