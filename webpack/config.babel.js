@@ -28,8 +28,16 @@ export default {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(s)?css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.svg$/,
+        use: 'svg-inline-loader',
+      },
+      {
+        test: /\.(jpe?g|png|gif|ico)$/i,
+        use: 'file-loader',
       },
     ],
   },
