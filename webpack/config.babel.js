@@ -11,6 +11,7 @@ export default {
   output: {
     filename: 'bundle.js',
     path: path.join(process.cwd(), 'public', 'js'),
+    publicPath: '/js',
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
